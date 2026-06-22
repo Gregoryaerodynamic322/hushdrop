@@ -35,7 +35,7 @@ The core way to use Hushdrop is **from your agent** — it publishes what it bui
 /plugin install hushdrop
 ```
 
-**Cursor · Codex · Copilot · Gemini · 50+ Agent Skills hosts:**
+**Cursor · Codex · Copilot · Gemini · 20+ Agent Skills hosts:**
 
 ```bash
 npx skills add maxtechera/hushdrop
@@ -83,11 +83,11 @@ terminal-native, zero-knowledge, on your own domain, usable from any agent. MIT.
 | | **Hushdrop** | Stacktree | send.co | tiiny.host |
 |---|:---:|:---:|:---:|:---:|
 | Your own domain | ✅ free | ❌ | ❌ | paid |
-| Zero-knowledge AES-256 | ✅ | ❌ | files only | ❌ |
+| Zero-knowledge AES-256 | ✅ | ✅ | files only | ❌ |
 | Open-source / self-host | ✅ MIT | ❌ | ❌ | ❌ |
 | CLI + MCP (agent-native) | ✅ | partial | ❌ | ❌ |
 | Anonymous, no-account drop | ✅ | ❌ | ✅ | ✅ |
-| Burn-after-read / email-gate | ✅ | ✅ | partial | ❌ |
+| Burn-after-read / email-gate | ✅ | partial | partial | ❌ |
 | Price | **free / self-host** | paid | freemium | freemium |
 
 Full write-ups: [vs Stacktree](https://hushdrop.dev/stacktree-alternative) · [vs Send](https://hushdrop.dev/send-co-alternative) · [vs ShareDuo](https://hushdrop.dev/shareduo-alternative)
@@ -143,7 +143,7 @@ codex  mcp add hushdrop -- npx -y hushdrop-mcp         # Codex
 { "mcpServers": { "hushdrop": { "command": "npx", "args": ["-y", "hushdrop-mcp"] } } }
 ```
 
-### MCP tools (9 — beats Stacktree's 8)
+### MCP tools (9 — vs Stacktree's 7)
 
 | Tool | Purpose |
 |------|---------|
@@ -186,7 +186,7 @@ share.yoursite.com` to point your CLI + agents at your instance. Self-host is **
 **Is it really zero-knowledge?** Yes — for locked drops, AES-256 runs in your browser before upload; the server stores only ciphertext.
 **Managed vs. hosted vs. self-host?** Managed = anonymous, 24h, no account. Hosted = free account, persistent links on `hushdrop.dev/you/…`. Self-host = your own domain + Blob.
 **Does it need Vercel?** Only to self-host. The managed + hosted tiers need nothing but `npx`.
-**How is this different from Stacktree?** Same agent-native idea, but open-source, self-hostable, your own domain free, zero-knowledge. See [the comparison](https://hushdrop.dev/stacktree-alternative).
+**How is this different from Stacktree?** Same agent-native idea, but open-source, self-hostable, your own domain free, and anonymous (no account). See [the comparison](https://hushdrop.dev/stacktree-alternative).
 **Can agents use it without MCP?** Yes — it's a single CLI; any agent that runs a shell command can publish.
 **Is it free?** Yes. MIT. Self-host costs only your own (usually pennies) Vercel Blob usage.
 
