@@ -1,0 +1,17 @@
+# Smithery — https://smithery.ai  (MCP server registry & hosting)
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      BLOB_READ_WRITE_TOKEN:
+        type: string
+        title: Vercel Blob token
+        description: Optional — only needed to self-host on your own domain. The managed (anonymous) tier works without it.
+    required: []
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', 'hushdrop-mcp'],
+      env: config.BLOB_READ_WRITE_TOKEN ? { BLOB_READ_WRITE_TOKEN: config.BLOB_READ_WRITE_TOKEN } : {}
+    })
