@@ -8,8 +8,8 @@ Open-source, self-hosted artifact sharing. Drop a file, an HTML page, or a whole
 branded, **password-protected (zero-knowledge AES-256)** link on **your own domain** in ~1 second —
 from your terminal or any AI agent. The open-source alternative to Stacktree.
 
-[![npm](https://img.shields.io/npm/v/hushdrop-cli?color=ff6b35)](https://www.npmjs.com/package/hushdrop-cli)
-[![downloads](https://img.shields.io/npm/dm/hushdrop-cli?color=ff6b35)](https://www.npmjs.com/package/hushdrop-cli)
+[![npm](https://img.shields.io/npm/v/hushdrop?color=ff6b35)](https://www.npmjs.com/package/hushdrop)
+[![downloads](https://img.shields.io/npm/dm/hushdrop?color=ff6b35)](https://www.npmjs.com/package/hushdrop)
 [![CI](https://github.com/maxtechera/hushdrop/actions/workflows/ci.yml/badge.svg)](https://github.com/maxtechera/hushdrop/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![stars](https://img.shields.io/github/stars/maxtechera/hushdrop?style=social)](https://github.com/maxtechera/hushdrop/stargazers)
@@ -26,19 +26,34 @@ from your terminal or any AI agent. The open-source alternative to Stacktree.
 
 ## Quick start
 
+The core way to use Hushdrop is **from your agent** — it publishes what it builds to your own domain.
+
+**Claude Code** (recommended — auto-updates via the plugin marketplace):
+
+```bash
+/plugin marketplace add maxtechera/hushdrop
+/plugin install hushdrop
+```
+
+**Cursor · Codex · Copilot · Gemini · 50+ Agent Skills hosts:**
+
+```bash
+npx skills add maxtechera/hushdrop
+```
+
 **No install** — open **[hushdrop.maxtechera.dev/try](https://hushdrop.maxtechera.dev/try)**, drop an HTML file, get a link. No account.
 
 **One-off from the terminal** — zero install, zero setup, no account:
 
 ```bash
-npx hushdrop-cli report.html       # → https://hushdrop.maxtechera.dev/u/xxxx (+ password, copied) — no setup, no account
+npx hushdrop report.html       # → https://hushdrop.maxtechera.dev/u/xxxx (+ password, copied) — no setup, no account
 ```
 
 **Free hosted account** — persistent links on your own handle (`hushdrop.maxtechera.dev/you/<slug>`):
 
 ```bash
-npx hushdrop-cli login                       # passwordless: GitHub or magic link
-npx hushdrop-cli report.html                 # → https://hushdrop.maxtechera.dev/you/report-a1b2 (persistent)
+npx hushdrop login                       # passwordless: GitHub or magic link
+npx hushdrop report.html                 # → https://hushdrop.maxtechera.dev/you/report-a1b2 (persistent)
 ```
 
 **Your own domain** — self-host on your Vercel Blob (free, MIT, your URL + brand forever):

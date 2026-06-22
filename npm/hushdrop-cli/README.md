@@ -1,11 +1,11 @@
-# hushdrop-cli
+# hushdrop-cli (deprecated)
 
-The `hush` command — share anything as a branded, password-protected, zero-knowledge link on your own
-domain, in one step.
+> **Use [`hushdrop`](https://www.npmjs.com/package/hushdrop) instead** — same CLI, shorter name:
+> ```bash
+> npx hushdrop report.html
+> ```
 
-```bash
-npx hushdrop-cli report.html --managed   # zero-setup: publish to the managed tier (no account)
-npx hushdrop-cli report.html             # your own domain (after `hush deploy`)
-```
+`hushdrop-cli` is a legacy alias and is no longer advertised. It still works (it re-exports the
+`hush` CLI from `hushdrop-mcp`), but new installs should use `hushdrop`.
 
 Open-source · self-hosted · MIT. Site & docs: https://hushdrop.maxtechera.dev
