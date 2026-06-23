@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" width="120" height="140" role="img" aria-label="Hushdrop">
+  <defs><mask id="k"><path d="M60 12C60 12 20 64 20 92a40 40 0 1 0 80 0C100 64 60 12 60 12Z" fill="#fff"/><circle cx="60" cy="86" r="13" fill="#000"/><path d="M55 92h10l-3 20h-4z" fill="#000"/></mask></defs>
+  <rect width="120" height="140" fill="#ffffff" mask="url(#k)"/>
+</svg>
