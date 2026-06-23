@@ -38,7 +38,7 @@ The core way to use Hushdrop is **from your agent** — it publishes what it bui
 **Cursor · Codex · Copilot · Gemini · 20+ Agent Skills hosts:**
 
 ```bash
-npx skills add maxtechera/hushdrop
+npx skills add maxtechera/hushdrop-skill
 ```
 
 **No install** — open **[hushdrop.dev/try](https://hushdrop.dev/try)**, drop an HTML file, get a link. No account.
